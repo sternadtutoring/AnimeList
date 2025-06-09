@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htlkaindorf.animelist.controller.AnimeController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <HBox spacing="20">
+        <VBox fx:id="listContainer" prefWidth="250" spacing="10">
+            <ListView fx:id="lvAnimeList" VBox.vgrow="ALWAYS" />
+        </VBox>
+
+        <VBox fx:id="detailsContainer" alignment="BASELINE_CENTER" spacing="10">
+            <ImageView fx:id="ivImage" fitHeight="300" fitWidth="210.0" preserveRatio="true" VBox.vgrow="ALWAYS">
+            <viewport>
+               <Rectangle2D />
+            </viewport></ImageView>
+            <Label fx:id="laTitle" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Title: TITLE" />
+            <Label fx:id="laStudio" text="Studio: STUDIO" />
+            <Label fx:id="laAdditionalInfo" text="ADDITIONAL INFO" />
+         <HBox spacing="20.0">
+            <children>
+               <Button fx:id="btNotStarted" mnemonicParsing="false" text="Not Started" textAlignment="CENTER" />
+               <Button fx:id="btCurrentlyWatching" mnemonicParsing="false" text="Currently Watching" textAlignment="CENTER" />
+               <Button fx:id="btFinished" mnemonicParsing="false" text="Finish" textAlignment="CENTER" />
+            </children>
+         </HBox>
+         <ProgressBar fx:id="prStatus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" progress="0.0" />
+        </VBox>
+    </HBox>
+</VBox>
